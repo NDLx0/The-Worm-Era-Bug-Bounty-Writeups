@@ -78,6 +78,7 @@ but we get `invalid url` even if the files are there, that's why i first thought
 that's why i switched sides to trying to redirect the request with a webhook which is basically a is a simple combination of _web_, referring to its HTTP-based communication, and the _hooking_ programming function that allows apps to intercept calls or other events that might be of interest. 
 In our case, we need to redirect the user to the server's localhost by simply another url like this one `https://eop6suubadsqia4.m.pipedream.net`
 and here's how it was configured 
+
 ![](images/10.png)
 
 What we need to focus on is the Location in Headers which like i said allows us to have a Server Side Request Forgery.
@@ -97,10 +98,13 @@ A simple command like nslookup can do the job :
 
 and we try again posting the request with the new URL `7f000001.8efbd12e.rbndr.us`
 This time we gonna need to send multiple requests that's why working with burp is easier.
+
 ![](images/13.png)
 
 After some requests to those endpoints we got the users uuid hashes 
+
 ![](images/14.png)
+
 The other two endpoints return us text results :
 
 /status : `site is up`
