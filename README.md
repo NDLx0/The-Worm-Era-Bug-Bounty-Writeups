@@ -4,7 +4,7 @@
 ## Unauthorized Access to User Credentials via API
 For the first app, we were introduced to this login page: 
 
-![[/images/Pasted image 20240304140338.png]]
+![](images/Pasted image 20240304140338.png)
 
 We try to use any credentials to see how the server reacts to our request ( without Burpsuite )
 
