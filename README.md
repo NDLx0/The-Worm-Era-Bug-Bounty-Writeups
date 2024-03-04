@@ -92,6 +92,7 @@ This website is the simplest and the best for such thing : [dnsrebinder](https:/
 
 the thing is that we can't use any ip address for B, it should be a dynamic one so let's go back to youtube.com and get its @ip 
 A simple command like nslookup can do the job :
+
 ![](images/12.png)
 
 and we try again posting the request with the new URL `7f000001.8efbd12e.rbndr.us`
