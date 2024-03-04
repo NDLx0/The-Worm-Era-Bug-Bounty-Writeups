@@ -4,7 +4,6 @@
 ## Unauthorized Access to User Credentials via API
 For the first app, we were introduced to this login page: 
 
-
 ![](images/1.png)
 
 We try to use any credentials to see how the server reacts to our request ( without Burpsuite )
@@ -14,6 +13,7 @@ We get `Invalid credentials. Please try again.` but looking at the URL `http://1
 I tried to play with that endpoint by changing the request method to `OPTIONS` or `PATCH`  but nothing came helpful as the methods were not allowed.
 
 Then i switched my tests to finding another vulnerable API endpoint so i started manual fuzzing for common ones, and ended up finding this `http://104.248.132.249:5000/api/v1/users`  which got us all the 3 usernames in the app, 
+
 ![](images/2.png)
 
 Basically now we should start looking for the endpoint where the server is storing the users infos. I just added the username `paw` to the URL and we got a finding 
@@ -43,6 +43,7 @@ Another thing was concerning is what if hash was giving any significant role or 
 ![](images/6.png)
 
 Trying to crack this hash won't help in anything but one last thing was i tried to md5 hash the username and compare the results :
+
 ![](images/7.png)
 
 And we got a match so now we get what the Author tried to do : 
