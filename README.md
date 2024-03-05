@@ -84,9 +84,11 @@ and here's how it was configured
 
 What we need to focus on is the Location in Headers which like i said allows us to have a Server Side Request Forgery.
 As soon we use the webhook URL and submit , we get another response which is `not found` and we're happy with that ! 
+
 But the problem now that we need a lot of fuzzing and the fact that everything i have to do is manual and every time i get a new URL to test with is tiring.
 That's why i switched to try finding another solution to further exploit the vulnerability.
 I tried writing an AJAX script to automate fuzzing but it didn't work as the server didn't filtered the requests or idk why exactly.
+
 A few hours later i learned about DNS rebinding which is a method of manipulating resolution of domain names that is commonly used as a form of computer attack. In this attack, a malicious web page causes visitors to run a client-side script that attacks machines elsewhere on the network.
 This website is the simplest and the best for such thing : [dnsrebinder](https://lock.cmpxchg8b.com/rebinder.html)
 
