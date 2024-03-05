@@ -28,8 +28,11 @@ Trying the user pwn.spawn() we can find a password !
 
 
 Now we got some credentials `pwn.spawn():mc_gastra` to login to the app we can start seeing other vulnerabilities.
+
 And we logged in ! 
+
 ![](images/5.png)
+
 ## Broken Access Control via URL 
 
 All the text in the website won't help us with nothing that's why we keep our focus on the URL again we see as we login the URL becomes like this : 
@@ -48,11 +51,11 @@ Trying to crack this hash won't help in anything but one last thing was i tried 
 ![](images/7.png)
 
 And we got a match so now we get what the Author tried to do : 
-`http://104.248.132.249:5000/api/v1/user/username/{md5(username)}/
+`http://104.248.132.249:5000/api/v1/user/username/{md5(username)}/`
 
 So the point is if there was a user named admin we can access his account by this URL
 
-`http://104.248.132.249:5000/api/v1/user/admin/21232f297a57a5a743894a0e4a801fc3
+`http://104.248.132.249:5000/api/v1/user/admin/21232f297a57a5a743894a0e4a801fc3`
 
 where md5("admin") = "21232f297a57a5a743894a0e4a801fc3"
 
