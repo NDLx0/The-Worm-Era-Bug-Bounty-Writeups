@@ -76,7 +76,9 @@ At this point, i tried to read some files the author had in the app by trying
 ![](images/9.png)
 
 but we get `invalid url` even if the files are there, that's why i first thought of bypassing the localhost filters with something like this for example `http://0/` or like this `⓵⓶⓻.⓿.⓿.⓵` also i thought of the option of using shortened URLs like the ones you see in `bit.ly` but again  none of that worked we still get `invalid url`
-that's why i switched sides to trying to redirect the request with a webhook which is basically a is a simple combination of _web_, referring to its HTTP-based communication, and the _hooking_ programming function that allows apps to intercept calls or other events that might be of interest. 
+
+that's why i switched sides to trying to redirect the request with a webhook which is basically a is a simple combination of _web_, referring to its HTTP-based communication, and the _hooking_ programming function that allows apps to intercept calls or other events that might be of interest.
+
 In our case, we need to redirect the user to the server's localhost by simply another url like this one `https://eop6suubadsqia4.m.pipedream.net`
 and here's how it was configured 
 
@@ -87,6 +89,7 @@ As soon we use the webhook URL and submit , we get another response which is `no
 
 But the problem now that we need a lot of fuzzing and the fact that everything i have to do is manual and every time i get a new URL to test with is tiring.
 That's why i switched to try finding another solution to further exploit the vulnerability.
+
 I tried writing an AJAX script to automate fuzzing but it didn't work as the server didn't filtered the requests or idk why exactly.
 
 A few hours later i learned about DNS rebinding which is a method of manipulating resolution of domain names that is commonly used as a form of computer attack. In this attack, a malicious web page causes visitors to run a client-side script that attacks machines elsewhere on the network.
