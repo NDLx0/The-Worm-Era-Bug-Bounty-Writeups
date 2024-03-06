@@ -64,7 +64,7 @@ But with my first finding we can put any character in the hash value and we get 
 Getting back to the `admin` user example, we can get access with only this URL
 
 `http://104.248.132.249:5000/api/v1/user/admin/2` 
-as the server seems to check if there's a value only not md5 decode it and checks if the value matches the username.
+as the server seems to check if there's a value only not md5 hash the username and checks if the value matches the hash he got.
 
 
 # 5000$ Bounty
